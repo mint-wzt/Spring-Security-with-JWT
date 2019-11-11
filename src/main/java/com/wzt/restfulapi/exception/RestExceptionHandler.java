@@ -13,7 +13,7 @@ public class RestExceptionHandler {
     private static Logger logger = LoggerFactory.getLogger(RestExceptionHandler.class);
 
 
-    @ExceptionHandler(value = NullPointerException.class)
+    @ExceptionHandler(value = NotFoundException.class)
     @ResponseBody
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public Result handleResourceNotFoundException(NotFoundException e)
